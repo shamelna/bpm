@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Process Management | Continuous Improvement Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .header img.logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            color: #ffd559;
+        }
+        
+        /* Offer Banner */
+        .offer-banner {
+            background: #ffd559;
+            color: #000;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #e6c04f;
+        }
+        
+        .offer-banner h2 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .price-box {
+            margin: 20px 0;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            font-size: 1.5em;
+            color: #666;
+            margin-right: 15px;
+        }
+        
+        .current-price {
+            font-size: 3em;
+            font-weight: bold;
+            color: #c0392b;
+        }
+        
+        .savings {
+            font-size: 1.3em;
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .coupon-code {
+            display: inline-block;
+            background: #2c3e50;
+            color: #ffd559;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #c0392b;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.5em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background: #a93226;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .problem-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            font-size: 1.2em;
+            padding: 15px;
+            margin: 10px 0;
+            background: #ecf0f1;
+            border-left: 5px solid #c0392b;
+        }
+        
+        /* Solution Section */
+        .solution-section {
+            background: #ecf0f1;
+            padding: 60px 20px;
+        }
+        
+        .solution-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        /* Modules Section */
+        .modules-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .modules-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .module-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 5px solid #ffd559;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .module-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .module-card ul {
+            list-style: none;
+        }
+        
+        .module-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .module-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffd559;
+            font-weight: bold;
+        }
+        
+        /* Features Section */
+        .features-section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .features-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ffd559;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ffd559;
+        }
+        
+        /* Instructor Section */
+        .instructor-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .instructor-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .instructor-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .instructor-info h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .instructor-info h4 {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .credentials {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .credentials li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .credentials li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            background: #ecf0f1;
+            padding: 60px 20px;
+        }
+        
+        .testimonials-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .learner-count {
+            text-align: center;
+            font-size: 2em;
+            color: #ffd559;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card .quote {
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .testimonial-card .author {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .testimonial-card .author-title {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .benefits-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            padding: 15px 15px 15px 50px;
+            margin: 15px 0;
+            font-size: 1.2em;
+            position: relative;
+        }
+        
+        .benefit-item:before {
+            content: "✅";
+            position: absolute;
+            left: 10px;
+            font-size: 1.5em;
+        }
+        
+        /* What Sets Us Apart */
+        .apart-section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .apart-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ffd559;
+        }
+        
+        .apart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .apart-item {
+            padding: 20px;
+        }
+        
+        .apart-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffd559;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta .price-highlight {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #ffd559;
+            margin: 20px 0;
+        }
+        
+        .final-cta .urgency {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .faq-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 20px;
+        }
+        
+        .faq-item h3 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer img.logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+        }
+        
+        .footer a {
+            color: #ffd559;
+            text-decoration: none;
+        }
+        
+        /* Countdown Timer */
+        .countdown-timer {
+            background: #c0392b;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .countdown-timer-text {
+            margin-bottom: 10px;
+        }
+        
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .timer-segment {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 5px;
+            min-width: 80px;
+        }
+        
+        .timer-number {
+            font-size: 2em;
+            display: block;
+            color: #ffd559;
+        }
+        
+        .timer-label {
+            font-size: 0.8em;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .offer-banner h2 {
+                font-size: 1.6em;
+            }
+            
+            .current-price {
+                font-size: 2.2em;
+            }
+            
+            .module-grid,
+            .features-grid,
+            .testimonial-grid,
+            .apart-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="http://practitioner.kaizenacademy.education/logo_round.png" alt="Continuous Improvement Academy Logo" class="logo">
+        <h1>Business Process Management</h1>
+        <p class="subtitle">Master Business Process Management and A3 Problem-Solving for service industries, healthcare, finance, HR, and any business process</p>
+    </div>
+    
+    <!-- Offer Banner -->
+    <div class="offer-banner">
+        <h2>🚀 EXCLUSIVE LIMITED-TIME OFFER</h2>
+        <div class="price-box">
+            <span class="original-price">$250</span>
+            <span class="current-price">$200 USD</span>
+        </div>
+        <div class="savings">Save 20%!</div>
+        <div class="coupon-code">KAIZEN20</div>
+        <p style="font-size: 1.2em; margin-top: 10px;">⏰ Limited time only—opportunity doesn't wait!</p>
+        <a href="https://academy.continuousimprovement.education/purchase?product_id=6459715&coupon=kaizen20" class="cta-button">ENROLL NOW →</a>
+    </div>
+    
+    <!-- Countdown Timer -->
+    <div class="countdown-timer">
+        <div class="countdown-timer-text">⚡ HURRY! Your exclusive 20% discount expires in:</div>
+        <div class="timer-display">
+            <div class="timer-segment">
+                <span class="timer-number" id="hours">23</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-segment">
+                <span class="timer-number" id="minutes">59</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-segment">
+                <span class="timer-number" id="seconds">59</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Problem Section -->
+    <div class="problem-section">
+        <div class="container">
+            <h2>The Problem You're Facing</h2>
+            <div class="problem-list">
+                <div class="problem-item">Are recurring problems in your office, healthcare facility, or service operations draining productivity?</div>
+                <div class="problem-item">Do you struggle to identify root causes of delays in patient care, loan processing, HR onboarding, or customer service?</div>
+                <div class="problem-item">Are your improvement initiatives in finance, IT, administration, or operations failing to deliver sustainable results?</div>
+                <div class="problem-item">Is waste hiding in your business processes—excessive approvals, waiting times, errors, and rework?</div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 1.3em; font-weight: bold;">You're not alone. Most service organizations and business functions lack a systematic approach to process improvement—and it's costing them competitive advantage.</p>
+        </div>
+    </div>
+    
+    <!-- Solution Section -->
+    <div class="solution-section">
+        <div class="container">
+            <h2>The Solution: A Proven Framework</h2>
+            <div class="solution-content">
+                <p>This comprehensive course equips you with <strong>Business Process Management principles</strong> and the <strong>A3 problem-solving framework</strong>—the same methodology used by <strong>Toyota and world-class organizations</strong>, now adapted for <strong>service industries, healthcare, finance, HR, IT, and all business processes</strong>.</p>
+                <p style="margin-top: 20px; font-size: 1.3em; color: #c0392b; font-weight: bold;">Originally from manufacturing, now proven in services.</p>
+                <p>While these methods originated in manufacturing, they're incredibly powerful for office environments, hospitals, banks, insurance companies, government agencies, and any organization with business processes. You'll learn how to identify waste in paperwork, approvals, patient journeys, customer onboarding, and administrative workflows.</p>
+                <p style="margin-top: 20px;">You'll gain practical tools, templates, and techniques you can implement immediately in <strong>your specific industry</strong> to drive real, measurable results.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modules Section -->
+    <div class="modules-section">
+        <div class="container">
+            <h2>What You'll Learn</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <h3>Module 1: Foundations</h3>
+                    <ul>
+                        <li>Business Process Management essentials</li>
+                        <li>Core, support, and management processes</li>
+                        <li>A3 methodology overview</li>
+                        <li>Critical 7-step problem-solving sequence</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Module 2: Analysis Foundations</h3>
+                    <ul>
+                        <li>The 7 types of waste in business processes (service examples: waiting, motion, overprocessing)</li>
+                        <li>Gemba philosophy: Go to where work happens</li>
+                        <li>Performance metrics for service industries</li>
+                        <li>SMART target condition setting</li>
+                        <li>Root cause analysis tools (5 Whys, Fishbone, Pareto)</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Module 3: Solution Development</h3>
+                    <ul>
+                        <li>Countermeasure development hierarchy</li>
+                        <li>Impact vs. effort prioritization</li>
+                        <li>PDCA Cycle (Plan-Do-Check-Act)</li>
+                        <li>Pilot testing strategies</li>
+                        <li>Implementation best practices</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Module 4: Process Mapping</h3>
+                    <ul>
+                        <li>Process hierarchy levels for any business function</li>
+                        <li>SIPOC analysis (Suppliers, Inputs, Process, Outputs, Customers)</li>
+                        <li>BPMN swimlane diagrams for cross-functional workflows</li>
+                        <li>Mapping patient journeys, customer onboarding, approval processes</li>
+                        <li>Value stream mapping for service delivery</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Module 5: Documentation</h3>
+                    <ul>
+                        <li>Multi-level repository structure</li>
+                        <li>Documentation best practices</li>
+                        <li>BPM and A3 integration</li>
+                        <li>Standardization for sustainability</li>
+                        <li>Continuous improvement systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Industry Applications Section -->
+    <div class="solution-section">
+        <div class="container">
+            <h2>Perfect for Service Industries & Business Processes</h2>
+            <div class="solution-content">
+                <p style="font-size: 1.3em; margin-bottom: 30px; text-align: center; color: #c0392b; font-weight: bold;">This isn't just for manufacturing. These proven methodologies work brilliantly in service environments.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px;">
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">🏥 Healthcare</h3>
+                        <p>Reduce patient wait times, streamline admission processes, eliminate errors in medical records, optimize emergency department flow, and improve patient care pathways.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">🏦 Financial Services</h3>
+                        <p>Accelerate loan processing, reduce errors in account opening, streamline compliance reviews, optimize claim processing, and eliminate redundant approvals.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">👥 Human Resources</h3>
+                        <p>Streamline recruitment and onboarding, reduce time-to-hire, eliminate bottlenecks in performance reviews, optimize payroll processes, and improve employee experience.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">💻 IT & Technology</h3>
+                        <p>Reduce incident resolution time, streamline change management, optimize service desk operations, eliminate rework in software deployments, and improve user support.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">🏛️ Government & Public Sector</h3>
+                        <p>Accelerate permit processing, reduce citizen wait times, streamline licensing procedures, optimize document workflows, and improve service delivery.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">📞 Customer Service</h3>
+                        <p>Improve first-call resolution, reduce customer wait times, eliminate unnecessary transfers, optimize complaint handling, and enhance customer satisfaction.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">⚖️ Legal & Professional Services</h3>
+                        <p>Streamline document review, optimize case management, reduce administrative burden, eliminate bottlenecks in client onboarding, and improve billing processes.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">🎓 Education</h3>
+                        <p>Streamline student enrollment, optimize course registration, reduce administrative workload, improve communication processes, and enhance student services.</p>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; font-size: 1.2em; margin-top: 40px; font-weight: bold;">The 7 types of waste exist everywhere—not just on factory floors, but in every email, approval, handoff, and business process.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="container">
+            <h2>Course Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📹</div>
+                    <h3>Self-Paced Video Tutorials</h3>
+                    <p>Learn at your own pace with engaging, professionally produced content</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📄</div>
+                    <h3>Downloadable PDFs</h3>
+                    <p>Keep reference materials for offline access and team sharing</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Ready-to-Use Templates</h3>
+                    <p>A3 templates, process maps, and analysis tools included</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">♾️</div>
+                    <h3>Lifetime Access</h3>
+                    <p>Return anytime to refresh your knowledge or explore updates</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Certificate of Completion</h3>
+                    <p>Validate your expertise and showcase your commitment</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Continuously Updated</h3>
+                    <p>Content reflects the latest advancements in the field</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Instructor Section -->
+    <div class="instructor-section">
+        <div class="container">
+            <h2>Meet Your Instructor</h2>
+            <div class="instructor-content">
+                <div class="instructor-info">
+                    <h3>Ahmed Radwan</h3>
+                    <h4>Lean Manufacturing & Operational Excellence Expert</h4>
+                    <p>Leading our academy is Ahmed Radwan, a seasoned professional with over 15 years of experience in lean manufacturing and operational excellence. Ahmed holds a Master of Business Administration and deep understanding of various continuous improvement concepts, tools, and methodologies.</p>
+                    
+                    <ul class="credentials">
+                        <li>Certified Lean Six Sigma Black Belt (IASSC)</li>
+                        <li>Certified Lean Six Sigma Master Black Belt (CSSC)</li>
+                        <li>Certified Lean Bronze (Shingo Institute)</li>
+                        <li>Certified Professional Scrum Master (Scrum.org)</li>
+                        <li>Hoshin Kanri (Lean Enterprise Institute)</li>
+                        <li>Project Management Professional (PMI)</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">Ahmed's expertise extends beyond certifications. He brings a practical approach, honed through years of real-world experience, to ensure that training translates into tangible results.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <div class="testimonials-section">
+        <div class="container">
+            <h2>What Our Learners Say</h2>
+            <div class="learner-count">Join 5,000+ Professionals Worldwide</div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Ahmed is a delight to work with. He did an amazing job of synthesizing key points from the book [The Toyota Way], wrote a draft of the script, connected the script to engaging graphics, and is an ace at the technology. Ahmed clearly has a deep grasp of lean and The Toyota Way."</p>
+                    <p class="author">Jeffrey Liker</p>
+                    <p class="author-title">Liker Lean Advisor | Author of The Toyota Way</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote">"Ahmed has established an awesome presence on LinkedIn articulating visuals, quotes, short PowerPoints that has helped me enhance my materials, as well as many others so they grow in their role and genre of work. He is eager to lead and learn simultaneously with others.....Thanks Ahmed for all your hard work in the Lean Community!"</p>
+                    <p class="author">Tracey Richardson</p>
+                    <p class="author-title">Retired from Toyota | Author of The Toyota Engagement Equation</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote">"The course was a great match for me. I'm very happy with the content."</p>
+                    <p class="author">Diego Garces</p>
+                    <p class="author-title">Course Graduate</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote">"Made easy and elaborative. Really informative and making life simpler."</p>
+                    <p class="author">Pradeep Kalwani</p>
+                    <p class="author-title">Course Graduate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Benefits Section -->
+    <div class="benefits-section">
+        <div class="container">
+            <h2>What You'll Achieve</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">Identify and eliminate the 7 types of waste in any business process (emails, approvals, waiting, errors)</div>
+                <div class="benefit-item">Apply the A3 problem-solving methodology to healthcare, finance, HR, IT, or any service challenge</div>
+                <div class="benefit-item">Create value stream maps for patient journeys, loan processing, onboarding, or customer service</div>
+                <div class="benefit-item">Conduct effective root cause analysis for recurring business problems using 5 Whys, Fishbone, and Pareto</div>
+                <div class="benefit-item">Develop countermeasures that deliver sustainable results in office and service environments</div>
+                <div class="benefit-item">Document and standardize processes across departments and functions</div>
+                <div class="benefit-item">Lead continuous improvement initiatives in non-manufacturing settings with confidence</div>
+                <div class="benefit-item">Drive measurable improvements in cycle time, quality, customer satisfaction, and employee productivity</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- What Sets Us Apart -->
+    <div class="apart-section">
+        <div class="container">
+            <h2>What Sets Us Apart</h2>
+            <div class="apart-grid">
+                <div class="apart-item">
+                    <h3>🎓 Expert Instructors</h3>
+                    <p>Over 15 years of experience in lean manufacturing and operational excellence, with Lean Six Sigma Black Belt and Master Black Belt certifications.</p>
+                </div>
+                
+                <div class="apart-item">
+                    <h3>🔧 Actionable Learning</h3>
+                    <p>Practical implementation templates and resources for immediate application—no empty theory.</p>
+                </div>
+                
+                <div class="apart-item">
+                    <h3>✅ Trusted Content</h3>
+                    <p>Information sourced from authentic, primary, reliable sources including Toyota methodologies—adapted and proven effective for service industries, healthcare, finance, and all business processes.</p>
+                </div>
+                
+                <div class="apart-item">
+                    <h3>👥 Personalized</h3>
+                    <p>Flexible learning options designed around your schedule and learning style.</p>
+                </div>
+                
+                <div class="apart-item">
+                    <h3>🔄 Continuous Improvement</h3>
+                    <p>We practice what we teach—content is continuously updated to reflect latest advancements.</p>
+                </div>
+                
+                <div class="apart-item">
+                    <h3>🏆 Accredited Training</h3>
+                    <p>Registered provider with the Council for Six Sigma Certification.</p>
+                </div>
+                
+                <div class="apart-item">
+                    <h3>🤝 Lifelong Partnership</h3>
+                    <p>Lifetime access to exclusive webinars, premium newsletters, and growing network of professionals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Q: How long do I have access to the course?</h3>
+                    <p>A: Lifetime! Once enrolled, you have unlimited access to all course materials, updates, and resources.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q: Is this course suitable for beginners?</h3>
+                    <p>A: Absolutely! This course is designed for both beginners and experienced professionals seeking to strengthen their process improvement skills.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q: What format is the course in?</h3>
+                    <p>A: Self-paced video tutorials with downloadable PDF guides and templates. Learn at your own pace, on your own schedule.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q: Will I receive a certificate?</h3>
+                    <p>A: Yes! Upon completion, you'll receive a certificate validating your expertise in Business Process Management.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q: How is this different from other courses?</h3>
+                    <p>A: Our course combines authentic content from primary sources (including Toyota methodologies), practical templates, real-world applications, and lifetime access to ongoing resources and community of 5,000+ professionals.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q: Who should take this course?</h3>
+                    <p>A: This course is perfect for service industry professionals including: healthcare administrators, hospital operations managers, financial services managers, HR directors, IT operations leaders, insurance operations managers, government agency administrators, customer service directors, legal operations managers, education administrators, and anyone responsible for improving business processes outside of manufacturing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Final CTA -->
+    <div class="final-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Processes?</h2>
+            <p style="font-size: 1.3em; margin: 20px 0;">"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice." — Brian Herbert</p>
+            <p style="font-size: 1.5em; margin: 20px 0; font-weight: bold;">What will you choose?</p>
+            <div class="price-highlight">Only $200 USD</div>
+            <div class="coupon-code">Use code: KAIZEN20</div>
+            <div class="urgency">⏰ Limited Time Offer — Act Now!</div>
+            <a href="https://academy.continuousimprovement.education/purchase?product_id=6459715&coupon=kaizen20" class="cta-button">ENROLL NOW →</a>
+            <p style="margin-top: 30px; font-size: 1.1em;">✓ Lifetime Access | ✓ Certificate | ✓ Templates Included | ✓ 5,000+ Community</p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <img src="http://practitioner.kaizenacademy.education/logo_round.png" alt="Logo" class="logo">
+            <h3>The Continuous Improvement Academy</h3>
+            <p>KAIZEN ACADEMY PTY LTD</p>
+            <p><strong>Empowering People • Driving Excellence • Always Improving</strong></p>
+            <p style="margin-top: 20px;">
+                Email: <a href="/cdn-cgi/l/email-protection#dfb3babeadb19fbcb0b1abb6b1aab0aaacb6b2afadb0a9bab2bab1abf1babbaabcbeabb6b0b1"><span class="__cf_email__" data-cfemail="b9d5dcd8cbd7f9dad6d7cdd0d7ccd6cccad0d4c9cbd6cfdcd4dcd7cd97dcddccdad8cdd0d6d7">[email&#160;protected]</span></a><br>
+                Website: <a href="https://www.continuousimprovement.education">www.continuousimprovement.education</a>
+            </p>
+            <p style="margin-top: 30px; font-size: 0.9em;">The Continuous Improvement Academy © 2024 by KAIZEN ACADEMY PTY LTD is licensed under CC BY-NC-ND 4.0</p>
+        </div>
+    </div>
+    
+    <!-- Countdown Timer Script -->
+    <script>
+        // Function to get or set the countdown end time in localStorage
+        function getCountdownEndTime() {
+            let endTime = localStorage.getItem('bpmCountdownEnd');
+            
+            if (!endTime) {
+                // Set end time to 24 hours from now
+                const now = new Date().getTime();
+                endTime = now + (24 * 60 * 60 * 1000); // 24 hours in milliseconds
+                localStorage.setItem('bpmCountdownEnd', endTime);
+            }
+            
+            return parseInt(endTime);
+        }
+        
+        // Function to handle offer expiration
+        function handleOfferExpiration() {
+            // Update countdown timer display
+            const timerText = document.querySelector('.countdown-timer-text');
+            timerText.innerHTML = '❌ OFFER ENDED - Regular Price Now Applies';
+            timerText.style.fontSize = '1.4em';
+            
+            // Hide timer display
+            const timerDisplay = document.querySelector('.timer-display');
+            if (timerDisplay) {
+                timerDisplay.style.display = 'none';
+            }
+            
+            // Update all CTA buttons to regular price link (without coupon)
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.href = 'https://academy.continuousimprovement.education/purchase?product_id=6459715';
+            });
+            
+            // Update offer banner
+            const offerBanner = document.querySelector('.offer-banner h2');
+            if (offerBanner) {
+                offerBanner.textContent = 'OFFER HAS ENDED';
+            }
+            
+            const currentPrice = document.querySelector('.current-price');
+            if (currentPrice) {
+                currentPrice.textContent = '$250 USD';
+                currentPrice.style.color = '#2c3e50';
+            }
+            
+            const originalPrice = document.querySelector('.original-price');
+            if (originalPrice) {
+                originalPrice.style.display = 'none';
+            }
+            
+            const savings = document.querySelector('.savings');
+            if (savings) {
+                savings.style.display = 'none';
+            }
+            
+            const couponCode = document.querySelectorAll('.coupon-code');
+            couponCode.forEach(code => {
+                code.style.display = 'none';
+            });
+            
+            // Update final CTA section
+            const priceHighlight = document.querySelector('.price-highlight');
+            if (priceHighlight) {
+                priceHighlight.textContent = '$250 USD';
+            }
+            
+            const urgency = document.querySelector('.urgency');
+            if (urgency) {
+                urgency.textContent = 'Regular Price - Still Great Value!';
+            }
+        }
+        
+        // Update the countdown timer
+        function updateCountdown() {
+            const endTime = getCountdownEndTime();
+            const now = new Date().getTime();
+            const distance = endTime - now;
+            
+            // If countdown is finished
+            if (distance < 0) {
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                
+                // Handle offer expiration
+                handleOfferExpiration();
+                return;
+            }
+            
+            // Calculate time remaining
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update countdown immediately
+        updateCountdown();
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
