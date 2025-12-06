@@ -550,6 +550,101 @@
             margin-top: 5px;
         }
         
+        
+        /* Module Cards */
+        .module-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            flex-wrap: wrap;
+        }
+        
+        .module-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd559;
+        }
+        
+        .module-header h3 {
+            flex: 1;
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.4em;
+            min-width: 300px;
+        }
+        
+        .module-duration {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 8px 15px;
+            background: #f8f9fa;
+            border-radius: 20px;
+        }
+        
+        .module-content {
+            padding-top: 10px;
+        }
+        
+        .module-description {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .lesson-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .lesson-list li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .lesson-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson-list li strong {
+            color: #2c3e50;
+        }
+        
+        .module-highlight {
+            margin-top: 20px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #fff5cc 0%, #ffe082 100%);
+            border-left: 4px solid #ffd559;
+            border-radius: 5px;
+            color: #2c3e50;
+        }
+        
+        .module-highlight strong {
+            color: #c0392b;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .header h1 {
@@ -881,6 +976,189 @@
                     <p style="font-weight: bold; color: #2c3e50; margin-bottom: 5px;">Ravindra Umbarkar</p>
                     <p style="color: #7f8c8d; font-size: 0.9em;">Operations Excellence Leader</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Course Modules Section -->
+    <div class="benefits-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+        <div class="container">
+            <h2>Complete Course Curriculum</h2>
+            <p style="text-align: center; font-size: 1.2em; color: #666; margin-bottom: 50px;">5 comprehensive modules with step-by-step video tutorials, templates, and exercises</p>
+            
+            <!-- Process Mapping Preview -->
+            <div style="background: white; padding: 40px; border-radius: 15px; margin-bottom: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: #2c3e50; margin-bottom: 20px; text-align: center;">See What You'll Learn to Create</h3>
+                <p style="text-align: center; color: #666; margin-bottom: 30px;">Watch how you'll map business processes using professional tools:</p>
+                
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 30px; border-radius: 10px;">
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/W9AHbKvVrgU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <p style="text-align: center; color: #2c3e50; font-weight: bold; margin-bottom: 15px;">Example Process Map You'll Create:</p>
+                <img src="http://bpm.kaizenacademy.education/images/drawio.png" alt="Business Process Map Example" style="width: 100%; max-width: 900px; display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <p style="text-align: center; color: #666; margin-top: 15px; font-style: italic;">Professional process maps using Draw.io - from patient journeys to approval workflows</p>
+            </div>
+            
+            <!-- Module 1 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <span class="module-number">Module 1️⃣</span>
+                    <h3>Introduction to Business Process Management</h3>
+                    <span class="module-duration">10 Lessons | ~24 minutes</span>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">Build your foundation in BPM and understand why process improvement is critical for service industries.</p>
+                    <ul class="lesson-list">
+                        <li>✓ Learning Objectives (7:38)</li>
+                        <li>✓ What is a Process (2:17)</li>
+                        <li>✓ Business Process Management (1:57)</li>
+                        <li>✓ Types of Processes (2:02)</li>
+                        <li>✓ Performance Metrics (2:09)</li>
+                        <li>✓ Common Process Problems (1:49)</li>
+                        <li>✓ Why BPM (2:17)</li>
+                        <li>✓ Introduction to A3 (2:19)</li>
+                        <li>✓ Module Recap (1:48)</li>
+                        <li>✓ Knowledge Check Quiz</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <span class="module-number">Module 2️⃣</span>
+                    <h3>Current State, Target Conditions, Process Mapping & Root Cause Analysis</h3>
+                    <span class="module-duration">13 Lessons | ~49 minutes + Hands-on Exercise</span>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">Learn to map current processes, identify the 7 wastes, set targets, and perform root cause analysis.</p>
+                    <ul class="lesson-list">
+                        <li>✓ Module Introduction (8:06)</li>
+                        <li>✓ A3 Problem-Solving Methodology (1:13)</li>
+                        <li>✓ Understanding Current Conditions (2:46)</li>
+                        <li>✓ <strong>The 7 Wastes in Business Processes (5:19)</strong></li>
+                        <li>✓ Current State Process Mapping & Gemba Walks (2:26)</li>
+                        <li>✓ <strong>Process Mapping in Draw.io (13:44)</strong></li>
+                        <li>✓ Hands-on Exercise: Create Your Own Process Map</li>
+                        <li>✓ Target Condition Setting Methodology (2:56)</li>
+                        <li>✓ Introduction to Problem Solving & Root Cause Analysis (1:49)</li>
+                        <li>✓ The 5 Whys Methodology (5:48)</li>
+                        <li>✓ Fishbone Diagram Construction & Use (4:50)</li>
+                        <li>✓ Module Recap (0:46)</li>
+                        <li>✓ Knowledge Check Quiz</li>
+                    </ul>
+                    <div class="module-highlight">
+                        <strong>💡 Case Study Part I:</strong> Apply what you've learned to a real-world scenario (6:36)
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <span class="module-number">Module 3️⃣</span>
+                    <h3>Countermeasure Development & Implementation Planning</h3>
+                    <span class="module-duration">10 Lessons | ~81 minutes + Redesign Exercise</span>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">Design solutions, evaluate options, and create detailed implementation plans for sustainable improvements.</p>
+                    <ul class="lesson-list">
+                        <li>✓ Module Introduction (11:55)</li>
+                        <li>✓ Creative Problem Solving Techniques (6:23)</li>
+                        <li>✓ Future State Design - Foundation (4:26)</li>
+                        <li>✓ <strong>Future State Design - Detailed Analysis (14:18)</strong></li>
+                        <li>✓ Exercise: Redesign the Process Map on Draw.io (6:13)</li>
+                        <li>✓ Solution Evaluation & Planning (10:53)</li>
+                        <li>✓ <strong>Implementation Support Elements (18:42)</strong></li>
+                        <li>✓ Measuring Success (2:31)</li>
+                        <li>✓ Module Recap (0:38)</li>
+                        <li>✓ Knowledge Check Quiz</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <span class="module-number">Module 4️⃣</span>
+                    <h3>Implementation & Results Measurement</h3>
+                    <span class="module-duration">6 Lessons | ~49 minutes</span>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">Execute your improvement plan, measure results, and communicate outcomes effectively.</p>
+                    <ul class="lesson-list">
+                        <li>✓ Module Introduction (9:35)</li>
+                        <li>✓ <strong>The Execution Strategy (25:26)</strong></li>
+                        <li>✓ A3 Section 7: Follow-up (5:51)</li>
+                        <li>✓ Communication Strategies (5:57)</li>
+                        <li>✓ Module Recap (1:53)</li>
+                        <li>✓ Knowledge Check Quiz</li>
+                    </ul>
+                    <div class="module-highlight">
+                        <strong>💡 Case Study Part II:</strong> Complete implementation and measure results
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <span class="module-number">Module 5️⃣</span>
+                    <h3>Process Documentation: Building Your Process Repository</h3>
+                    <span class="module-duration">3 Lessons + Templates</span>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">Create a structured process repository using modern tools like Notion and AI for documentation.</p>
+                    <ul class="lesson-list">
+                        <li>✓ Introduction to Process Documentation</li>
+                        <li>✓ <strong>Step-by-Step Guide: Multi-Level Process Repository using Notion & AI</strong></li>
+                        <li>✓ Downloadable Documentation Templates</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Conclusion -->
+            <div class="module-card" style="background: linear-gradient(135deg, #ffd559 0%, #ffed4e 100%); border: 3px solid #2c3e50;">
+                <div class="module-header">
+                    <span class="module-number">🎓</span>
+                    <h3>Conclusion & Certification</h3>
+                    <span class="module-duration">2 Lessons</span>
+                </div>
+                <div class="module-content">
+                    <ul class="lesson-list">
+                        <li>✓ Conclusions & Lessons Learnt (9:18)</li>
+                        <li>✓ <strong>Course Exam & Certificate of Achievement</strong></li>
+                    </ul>
+                    <p style="margin-top: 20px; color: #2c3e50; font-weight: bold;">Upon completion, receive your official certificate recognized by the Council for Six Sigma Certification</p>
+                </div>
+            </div>
+            
+            <!-- Course Stats -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3em; color: #ffd559; margin-bottom: 10px;">42+</div>
+                    <div style="font-size: 1.2em; color: #2c3e50; font-weight: bold;">Video Lessons</div>
+                </div>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3em; color: #ffd559; margin-bottom: 10px;">200+</div>
+                    <div style="font-size: 1.2em; color: #2c3e50; font-weight: bold;">Minutes of Content</div>
+                </div>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3em; color: #ffd559; margin-bottom: 10px;">10+</div>
+                    <div style="font-size: 1.2em; color: #2c3e50; font-weight: bold;">Templates Included</div>
+                </div>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3em; color: #ffd559; margin-bottom: 10px;">∞</div>
+                    <div style="font-size: 1.2em; color: #2c3e50; font-weight: bold;">Lifetime Access</div>
+                </div>
+            </div>
+            
+            <div class="cta-box" style="margin-top: 50px;">
+                <h3>Ready to Master Business Process Management?</h3>
+                <p>Join 5,000+ professionals transforming their processes</p>
+                <a href="https://academy.continuousimprovement.education/purchase?product_id=6459715&coupon=kaizen20" class="cta-button cta-button-primary">Enroll Now - Save 20%</a>
+                <p class="offer-text">Use code <strong>KAIZEN20</strong> | Limited time offer</p>
             </div>
         </div>
     </div>
